@@ -22,7 +22,6 @@ img{
 }
 #context{
     position:absolute;
-    top:32vw;
     left: 50%;
     transform: translateX(-50%);
 }

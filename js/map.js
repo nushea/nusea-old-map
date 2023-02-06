@@ -3,6 +3,7 @@ const mapY = 2600;
 
 var elements = document.getElementsByClassName("mapimg");
 var elementsArray = Array.from(elements);
+var map = document.getElementById("actMap");
 
 const canvas = document.createElement("canvas");
 const ctx = canvas.getContext("2d");
@@ -15,13 +16,15 @@ image.onload = function() {
     ctx.drawImage(image, 0, 0);
   };
 
+function moveContext(){
+        console.log(map.offsetWidth);
+        document.getElementById("context").style.top = (map.offsetTop + map.offsetHeight) + "px";
+}
 function getPixelColor(x, y){
-    var map = document.getElementById("actMap");
     x -= map.offsetLeft - map.offsetWidth/2 - document.documentElement.scrollLeft;
     y -= map.offsetTop - document.documentElement.scrollTop;
     x = ~~(mapX * x / map.offsetWidth);
     y = ~~(mapY * y / map.offsetHeight);
-    console.log(x + " " + y);
     if(x > 0 && x < mapX && y > 0 && y < mapY)
         return ctx.getImageData(x, y, 1, 1).data;
     else 
@@ -95,7 +98,6 @@ function texthing(who){
     document.getElementById("context").innerHTML = NewText;
 }
 
-hoverFunc("WRONG");
 
 document.addEventListener("click", function(event) {
     col = getPixelColor(event.clientX, event.clientY);
@@ -103,4 +105,10 @@ document.addEventListener("click", function(event) {
         hoverFunc(colorMatch(col));
         texthing(colorMatch(col));
     }
-  });
+});
+document.addEventListener("resize",function(event){
+    moveContext();
+});
+
+hoverFunc("WRONG");
+setTimeout(moveContext, 100);

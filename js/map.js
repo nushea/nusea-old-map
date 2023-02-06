@@ -17,8 +17,8 @@ image.onload = function() {
   };
 
 function moveContext(){
-        console.log(map.offsetWidth);
-        document.getElementById("context").style.top = (map.offsetTop + map.offsetHeight) + "px";
+    console.log(map.offsetWidth);
+    document.getElementById("context").style.top = (map.offsetTop + map.offsetHeight) + "px";
 }
 function getPixelColor(x, y){
     x -= map.offsetLeft - map.offsetWidth/2 - document.documentElement.scrollLeft;
@@ -107,7 +107,7 @@ document.addEventListener("click", function(event) {
         texthing(colorMatch(col));
     }
 });
-document.addEventListener("resize",function(event){
+document.addEventListener("mousemove",function(event){
     moveContext();
 });
 

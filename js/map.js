@@ -100,6 +100,7 @@ function texthing(who){
 
 
 document.addEventListener("click", function(event) {
+    moveContext();
     col = getPixelColor(event.clientX, event.clientY);
     if(col != -1){
         hoverFunc(colorMatch(col));

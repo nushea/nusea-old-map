@@ -17,7 +17,6 @@ image.onload = function() {
   };
 
 function moveContext(){
-    console.log(map.offsetWidth);
     document.getElementById("context").style.top = (map.offsetTop + map.offsetHeight) + "px";
 }
 function getPixelColor(x, y){
@@ -77,7 +76,6 @@ function colorMatch(value){
         return "Fara";
 }
 function texthing(who){
-    console.log(who);
     var NewText = "EMPTY";
 
     if(who == "Hamnq") 
@@ -108,6 +106,9 @@ document.addEventListener("click", function(event) {
     }
 });
 document.addEventListener("mousemove",function(event){
+    moveContext();
+});
+window.addEventListener("resize",function(event){
     moveContext();
 });
 

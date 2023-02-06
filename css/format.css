@@ -20,9 +20,9 @@ img{
 #map{
     position: relative;
 }
-.context{
+#context{
     position:absolute;
-    top:30vw;
+    top:32vw;
     left: 50%;
     transform: translateX(-50%);
 }

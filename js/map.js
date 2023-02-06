@@ -26,15 +26,6 @@ function getPixelColor(x, y){
     else 
         return -1;
 }
-function colorMatch(value){
-    if(col[0] == 197 && col[1] == 98 && col[2] == 162 && col[3] == 255)
-        return "Hamnq";
-}
-
-document.addEventListener("click", function(event) {
-    col = getPixelColor(event.clientX, event.clientY);
-    hoverFunc(colorMatch(col));
-  });
 
 function hoverFunc(who){
     for (var i = 0; i < elementsArray.length; i++) {
@@ -44,4 +35,25 @@ function hoverFunc(who){
             elementsArray[i].style.display = "none";    
     }
 }
+
+function colorMatch(value){
+    if(col[0] == 218 && col[1] == 91 && col[2] == 96 && col[3] > 250 )
+        return "Hayi";
+    if(col[0] == 226 && col[1] == 31 && col[2] == 86 && col[3] > 250 )
+        return "Hasi";
+    if(col[0] == 235 && col[1] ==165 && col[2] ==255 && col[3] > 250 )
+        return "Hafu";
+    if(col[0] == 190 && col[1] == 128 && col[2] ==74 && col[3] > 250 )
+        return "Harim";
+    if(col[0] == 197 && col[1] == 98 && col[2] ==162 && col[3] > 250 )
+        return "Hamnq";
+}
+
+
 hoverFunc("WRONG");
+
+document.addEventListener("click", function(event) {
+    col = getPixelColor(event.clientX, event.clientY);
+    console.log(col);
+    hoverFunc(colorMatch(col));
+  });

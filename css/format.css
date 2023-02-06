@@ -13,6 +13,7 @@ img{
 .mapimg{
     max-width: 50vw;
     max-height: 50vh;
+    top: 5vh;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -21,7 +22,7 @@ img{
 }
 .context{
     position:absolute;
-    top:25vw;
+    top:30vw;
     left: 50%;
     transform: translateX(-50%);
 }

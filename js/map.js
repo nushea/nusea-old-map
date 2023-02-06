@@ -1,8 +1,17 @@
+const mapX = 4200;
+const mapY = 2600;
 
-
-
-
-
+document.addEventListener("click", function(event) {
+    var map = document.getElementById("actMap");
+    var x = event.clientX;
+    var y = event.clientY;
+    x -= map.offsetLeft - map.offsetWidth/2;
+    y -= map.offsetTop;
+    x = ~~(mapX * x / map.offsetWidth);
+    y = ~~(mapY * y / map.offsetHeight);
+    if(x > 0 && x < mapX && y > 0 && y < mapY)
+        console.log(x + " " + y);
+  });
 /*
 function hoverFunc(who, value){
     switch(value){

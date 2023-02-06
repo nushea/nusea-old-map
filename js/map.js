@@ -85,7 +85,7 @@ function texthing(who){
     if(who == "Hasi") 
         NewText = "<h3> HASI </h3> <p> If you want to marvel at the advancements of our world you need to visit Hasi, the land of good, where the cultural mix presents a variety of options, but think wrong, Hasi is still Ha land, so you will be welcomed as a Ga believer, and through thanks to the people of other beliefs you will be able to take comfort in RiMa like nowhere else";
     if(who == "Hago")
-        NewText = "<h3> HAGO </h3> <p> Hago, as the name implies is the newest Ha lands, this makes it a land of exploration and adventure, it is the perfect land for a person who is ready to help in the expansion of our great religion</p>"
+        NewText = "<h3> HAGO </h3> <p> Hago, as the name implies is the newest of the Ha lands, this makes it a land of exploration and adventure, it is the perfect land for a person who is ready to help in the expansion of our great religion</p>"
     if(who == "Hafu")
         NewText = "<h3> HAFU </h3> <p> Hafu represents a miriad of individual places, adventuring through it is bound to bring a new perspective in life, one of understanding why Ga is the religion it is, despite the fact that most places are old order you would be hard pressed to find more religious variety elsewhere, with multiple sea gods you are always under the protection of good spirits no matter where you decide to venture</p>"
     if(who != undefined && NewText == "EMPTY") 

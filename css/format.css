@@ -1,4 +1,20 @@
+body{
+    background-color: black;
+    color:white;
+}
 img{
+    position: absolute;
     border-radius: 0px;
     padding: 0px;
+}
+.mapimg{
+    max-width: 25vw;
+    max-height: 25vh;
+    left: 37.5vw;
+}
+#map{
+    position: relative;
+}
+#context{
+    position:absolute;
 }

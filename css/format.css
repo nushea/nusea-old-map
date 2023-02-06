@@ -1,6 +1,6 @@
 
 body{
-    background-color: #111;
+    background-color: rgb(60, 0, 36);
     font-size:24px;
     color: #fff;
 }
@@ -8,15 +8,20 @@ img{
     position: absolute;
     border-radius: 0px;
     padding: 0px;
+    background:none;
 }
 .mapimg{
-    max-width: 25vw;
-    max-height: 25vh;
-    left: 37.5vw;
+    max-width: 50vw;
+    max-height: 50vh;
+    left: 50%;
+    transform: translateX(-50%);
 }
 #map{
     position: relative;
 }
-#context{
+.context{
     position:absolute;
+    top:25vw;
+    left: 50%;
+    transform: translateX(-50%);
 }

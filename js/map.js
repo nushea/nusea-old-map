@@ -1,3 +1,9 @@
+
+
+
+
+
+/*
 function hoverFunc(who, value){
     switch(value){
     case 0:
@@ -17,5 +23,5 @@ for (var i = 0; i < elementsArray.length; i++) {
         elementsArray[i].style.display = "none";
         
   }
-  
+  */
 //document.getElementById("blank").style.display = "none";

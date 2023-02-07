@@ -26,3 +26,9 @@ img{
     left: 50%;
     transform: translateX(-50%);
 }
+#Ellil{
+    position:absolute;
+    max-width: 11vw;
+    max-height: 11vh;
+    left: 1%;
+}

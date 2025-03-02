@@ -4,6 +4,9 @@ script.src = 'js/time.js';
 document.head.appendChild(script);
 var curtime;
 
+var divt = document.getElementById('dietime');
+divt.innerHTML = "uwu";
+
 
 script.onload = () => {
     Module.onRuntimeInitialized = () => {
@@ -12,9 +15,6 @@ script.onload = () => {
     };
 };
 
-//while(curtime == null){
-//	console.log("nowasm");
-//}
 
 
 var checkWasmReady = setInterval(() => {
@@ -22,7 +22,11 @@ var checkWasmReady = setInterval(() => {
 		var oup = Module._malloc(50);
 		curtime(oup);
 		var outputString = Module.UTF8ToString(oup);
-		console.log(outputString);
+		if(outputString.charAt(outputString.length - 3) == ':')
+			outputString = outputString.substring(0, outputString.length - 2) + '0' + outputString.charAt(outputString.length - 2);
+		outputString = "<p style=\"font-size: 125%;margin: 0;\">" + outputString.substring(0, outputString.indexOf(' ')) + "</p>" + 
+			           "<p style=\"font-size: 200%;margin: 0;\">" + outputString.substring(outputString.indexOf(' ')+1) + "</p>";
+		divt.innerHTML = outputString;
 	        
 
         Module._free(oup);
@@ -31,16 +35,4 @@ var checkWasmReady = setInterval(() => {
     }
 }, 1000);
 
-/*
-var oup = Module._malloc(50);
-
-
-    curtime(oup);
-	var outputString = Module.UTF8ToString(oup);
-	console.log(outputString);
-	console.log(outputString);
-	i++;
-		
-	Module._free(oup);
-*/
 

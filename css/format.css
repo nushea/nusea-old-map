@@ -1,8 +1,8 @@
 
 body{
-    background-color: rgb(60, 0, 36);
+    background-color: #181825;
     font-size:24px;
-    color: #fff;
+    color: rgb(204,214,244);
 }
 img{
     position: absolute;
@@ -23,9 +23,9 @@ img{
 #context{
     position:absolute;
     width: 75vw;
-    left: 50%;
-	text-align: justify;
-    transform: translateX(-50%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 #Ellil{
     position:absolute;
